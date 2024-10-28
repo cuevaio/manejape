@@ -1,6 +1,10 @@
 'use server';
 
-import {  deleteSessionTokenCookie,  getSession, invalidateSession,  } from '@/lib/auth';
+import {
+  deleteSessionTokenCookie,
+  getSession,
+  invalidateSession,
+} from '@/lib/auth';
 
 export async function logout(): Promise<
   | {

@@ -2,8 +2,12 @@
 
 import { z } from 'zod';
 
+import {
+  createSession,
+  generateSessionToken,
+  setSessionTokenCookie,
+} from '@/lib/auth';
 import { redis } from '@/lib/redis';
-import { createSession, generateSessionToken, setSessionTokenCookie } from '@/lib/auth';
 
 export async function validate(formData: FormData): Promise<
   | {
@@ -48,7 +52,6 @@ export async function validate(formData: FormData): Promise<
 
     const sessionToken = generateSessionToken();
     await createSession(sessionToken, existingUserId);
-
 
     await setSessionTokenCookie(sessionToken);
 

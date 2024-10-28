@@ -4,7 +4,6 @@ export type User = {
   createdAt: string;
 };
 
-
 export type Session = {
   id: string;
   userId: string;

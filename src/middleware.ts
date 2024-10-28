@@ -6,7 +6,7 @@ import {
 } from './lib/auth/constants';
 
 export async function middleware(request: NextRequest): Promise<NextResponse> {
-  if (request.nextUrl.pathname.startsWith('/api/webhooks/stripe')) {
+  if (request.nextUrl.pathname.startsWith('/api/webhook/stripe')) {
     return NextResponse.next();
   }
 

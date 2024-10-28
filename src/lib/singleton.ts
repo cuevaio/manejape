@@ -1,6 +1,7 @@
 // Singleton function to ensure only unique instance are created
 
 export function singleton<Value>(name: string, value: () => Value): Value {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globalAny: any = global;
   globalAny.__singletons = globalAny.__singletons || {};
 

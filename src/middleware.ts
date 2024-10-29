@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest): Promise<NextResponse> {
     if (token !== null) {
       // Only extend cookie expiration on GET requests since we can be sure
       // a new session wasn't set when handling the request.
-      response.cookies.set('session', token, {
+      response.cookies.set(SESSION_TOKEN_COOKIE_NAME, token, {
         path: '/',
         maxAge: SESSION_TOKEN_COOKIE_EXPIRES_IN_S,
         sameSite: 'lax',

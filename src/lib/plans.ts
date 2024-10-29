@@ -1,8 +1,12 @@
+export const DISCOUNT = 0.5;
+export const DISCOUNT_MESSAGE =
+  '50% de descuento por nuestra semana de lanzamiento';
+
 export const PLANS = [
   {
     name: 'Basic',
     price: 0,
-    features: ['50 preguntas', '1 quizz por día', 'Soporte de comunidad'],
+    features: ['Banco de 50 preguntas', '1 quizz por día', 'Soporte de comunidad'],
   },
   {
     name: 'Pro',
